@@ -1,0 +1,28 @@
+<head>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+<div id="app">
+    <div
+     class="demo"
+     @click="attachRed = !attachRed"
+     :class="divClasses"
+        ></div>
+    <div
+     class="demo"
+     @click="attachRed = !attachRed"
+     :class="{red: attachRed}"
+        ></div>
+    <div class="demo" :class="'blue'" ></div>
+    <div class="demo" :class="[color, {red: attachRed}]" ></div>
+    <div class="demo" :style="{'background-color': color}" ></div>
+    <div class="demo" :style="{'width': width}"></div>
+    <div class="demo" :style="[myStyle, {height: width}]" ></div>
+    <hr>
+    <input type="text" v-model="color">
+    <input type="text" v-model="width">
+</div>
+
+<script src="app.js"></script>
